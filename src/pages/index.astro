@@ -1,16 +1,28 @@
 ---
-
+import PokedexList from '../components/PokedexList.jsx';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Pokédex Astro</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-gray-100 min-h-screen font-sans">
+		<header class="bg-red-600 text-white py-6 shadow-lg">
+			<div class="container mx-auto px-4">
+				<div class="flex items-center justify-center">
+					<div class="flex items-center">
+						<h1 class="text-4xl font-bold">Pokédex</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="container mx-auto px-4 py-8">
+			<PokedexList client:load />
+		</main>
 	</body>
 </html>
